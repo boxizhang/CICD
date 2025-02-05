@@ -1,6 +1,8 @@
 # CI/CD Workshop | R in Pharma 2022
 
-R in Pharma 2022 CI/CD workshop repository.
+R in Pharma 2025 CI/CD workshop repository.
+
+Date: 2025
 
 Full workshop video available here: https://www.youtube.com/watch?v=OcNzurpCCpY
 
