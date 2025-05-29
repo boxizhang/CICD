@@ -19,5 +19,5 @@ Demonstrates cyclomatic complexity
 linter_ex("lint")
 }
 \author{
-Yourself
+olink
 }

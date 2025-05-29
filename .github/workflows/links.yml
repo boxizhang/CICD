@@ -8,13 +8,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Check URLs in docs
-        uses: lycheeverse/lychee-action@v1.5.1
+        uses: lycheeverse/lychee-action@v1.5.1 #This step runs the Lychee link checker action (from the lycheeverse GitHub repository).
         with:
-          fail: true
-          jobSummary: true
-          format: markdown
-          output: links-results.md
+          fail: true # Makes the workflow fail if broken links are found.
+          jobSummary: true # Includes a summary of the results in the GitHub Actions job output.
+          format: markdown # Formats the output in Markdown.
+          output: links-results.md # Saves the link check results to a file named links-results.md.
           args: >-
             --exclude "https://github.com.*.git|lycheeverse.*"
             --no-progress **/*.md **/*.Rmd
-        env: {GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"}
+        env: {GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"} # Passes the GitHub token to the action for authentication, allowing it to access private repositories or use the GitHub API if needed.

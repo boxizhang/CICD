@@ -1,12 +1,9 @@
-# CI/CD Workshop | R in Pharma 2022
+# CI/CD Workshop
 
-R in Pharma 2025 CI/CD workshop repository.
+R 2025 CI/CD workshop repository.
 
 Date: 2025
 
-Full workshop video available here: https://www.youtube.com/watch?v=OcNzurpCCpY
-
-Presentation video available here: https://www.youtube.com/watch?v=8HPpdv8crHo
 
 ## Exercises
 
@@ -21,7 +18,7 @@ A unit test is failing for <code>hello.R</code>.
 <br/>
 
 <details><summary>Click here for the solution ✅</summary>
-The expected message should be <code>Welcome to the R/Pharma CI/CD workshop!</code> (<code>R/Pharma</code> is missing from the message) in the <code>tests/testthat/test-hello.R</code> file.
+The expected message should be <code>Welcome to CI/CD workshop!</code> (<code>R/Pharma</code> is missing from the message) in the <code>tests/testthat/test-hello.R</code> file.
 </details>
 
 ### Exercise 2
@@ -29,13 +26,13 @@ The expected message should be <code>Welcome to the R/Pharma CI/CD workshop!</co
 Fix broken links after implementing the **Check URLs** workflow.
 
 <details><summary>Click here for a hint 🔎</summary>
-An R/Pharma link is broken in the <code>NEWS.md</code> file.
+An R link is broken in the <code>NEWS.md</code> file.
 </details>
 
 <br/>
 
 <details><summary>Click here for the solution ✅</summary>
-The rinpharma website domain is incorrectly set as <code>.xcom</code>. It should be <code>.com</code>.
+The  website domain is incorrectly set as <code>.xcom</code>. It should be <code>.com</code>.
 </details>
 
 ### Exercise 3
