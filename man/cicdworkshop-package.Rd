@@ -11,12 +11,12 @@ Intended to demo CI/CD pipelines on GitHub.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://pharmaverse.github.io/cicdworkshop.rinpharma2022}
+  \item \url{https://github.com/boxizhang/CICD}
 }
 
 }
 \author{
-\strong{Maintainer}: Open Source \email{osauthor@noreply.pharmaverse.com}
+\strong{Maintainer}: Open Source \email{osauthor@olink.com}
 
 }
 \concept{internal}

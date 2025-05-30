@@ -1,20 +1,20 @@
-#' Hello Workshop Attendees
+#' CI/CD training
 #'
-#' Welcomes the CI/CD workshop attendees
-#' @author Yourself
-#' @details Greet workshop attendees
-#' @return Happy Message
+#' Welcomes to the CI/CD workshop
+#' @author Boxi
+#' @details rock the CI/CD
+#' @return BingGo
 #' @export
 #' @examples
-#' hello()
-hello <- function() {
-  message("Welcome to the R/Pharma CI/CD workshop!")
+#' olink()
+olink <- function() {
+  message("We have great products and great people!!!!!")
 }
 
 #' Linting for Cyclomatic Complexity
 #'
 #' Cyclomatic Complexity Example
-#' @author Yourself
+#' @author olink
 #' @details Demonstrates cyclomatic complexity
 #' @return Surprised Message!
 #' @export

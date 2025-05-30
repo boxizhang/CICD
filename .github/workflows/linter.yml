@@ -7,12 +7,12 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        with: {fetch-depth: 0}
+        with: {fetch-depth: 0} #fetches the full git history (not just the last commit), which may be useful for the linter or version-based rules.
       - name: Lint Code Base
-        uses: github/super-linter/slim@v4
+        uses: github/super-linter/slim@v4 # Uses the GitHub Super-Linter (lightweight slim version) to lint the code.
         env:
-          VALIDATE_ALL_CODEBASE: false
-          VALIDATE_R: true
-          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          VALIDATE_ALL_CODEBASE: false # Lint only changed files, not the entire codebase (for faster checks).
+          VALIDATE_R: true # Enable R linting (using lintr)
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }} # Dynamic reference to the repo's default branch (e.g., main or master).
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LINTR_ERROR_ON_LINT: true
+          LINTR_ERROR_ON_LINT: true # Forces the linter to fail the workflow if linting errors are found.
