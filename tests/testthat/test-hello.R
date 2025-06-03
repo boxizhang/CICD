@@ -5,9 +5,9 @@ test_that("hello cicdworkshop", {
   )
 })
 
-# test_that("linter_ex is surprised", {
-#   expect_message(
-#     linter_ex("lint"),
-#     "^BingGo!\\n"
-#   )
-# })
+test_that("linter_ex is surprised", {
+  expect_message(
+    linter_ex("lint"),
+    "^BingGo!\\n"
+  )
+})
