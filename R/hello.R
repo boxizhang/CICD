@@ -24,7 +24,9 @@ linter_ex <- function(x) {
   if (x == "lint") {
     if (x == "lint") {
       if (x == "lint") {
+        if (x == "lint") {
         message("Whoa!!")
+        }
       }
     }
   }
