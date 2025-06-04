@@ -17,6 +17,10 @@ jobs:
         with:
           r-version: '4.2.1' # Specify the version of R you want to use
 
+      - name: Install devtools
+        run: install.packages("devtools")
+        shell: Rscript {0}
+
       - name: Install dependencies
         run: devtools::install_dev_deps() # Install development dependencies listed in DESCRIPTION
         shell: Rscript {0} # Tells the system to interpret the command as R code
