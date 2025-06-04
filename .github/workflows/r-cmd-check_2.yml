@@ -1,0 +1,28 @@
+name: R CMD check
+
+on:
+  pull_request: 
+    branches: ['main'] # Workflow triggers on pull requests targeting the main branch
+
+jobs:
+  Check: # Name of the job
+    runs-on: ubuntu-latest # The job will run on the latest version of Ubuntu
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3 # Clone the repository into the workflow’s virtual environment
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2 # Sets up R on the runner
+        with:
+          r-version: '4.2.1' # Specify the version of R you want to use
+
+      - name: Install dependencies
+        run: devtools::install_dev_deps() # Install development dependencies listed in DESCRIPTION
+        shell: Rscript {0} # Tells the system to interpret the command as R code
+
+      - name: Build package
+        run: R CMD build . # Build the package from the code in the repository
+
+      - name: Check package
+        run: R CMD check --no-manual *.tar.gz # Run R CMD check on the built tarball
