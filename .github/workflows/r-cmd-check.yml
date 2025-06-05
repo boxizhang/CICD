@@ -1,0 +1,17 @@
+name: R CMD check
+on:
+  pull_request: {branches: ['main']} # when the workflow should run, when workflow triggers on pull requests targeting the main branch
+jobs: # Defines a job (or multiple jobs) that the workflow will execute.
+  Check: # the name of the job
+    runs-on: ubuntu-latest # The job will run on a virtual machine with the latest version of Ubuntu
+    container: {image: "rocker/tidyverse:4.2.1"} # The job will run inside a Docker container based on the rocker/tidyverse:4.2.1 image.
+    steps: # defines the individual steps of the job
+      - name: Check out repository
+        uses: actions/checkout@v3 # Uses the checkout action to clone your GitHub repository into the workflow’s virtual environment.
+      - name: Install dependencies 
+        run: devtools::install_dev_deps() #Installs all development dependencies listed in the DESCRIPTION file using the devtools::install_dev_deps() function.
+        shell: Rscript {0} # tells the system to interpret the command as R code
+      - name: Build package
+        run: R CMD build . # Runs the R CMD build command, which builds your package (source tarball) from the code in the repository.
+      - name: Check package
+        run: R CMD check --no-manual *.tar.gz # Runs the R CMD check command on the newly built tarball (matching *.tar.gz).
